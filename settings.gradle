@@ -1,2 +1,4 @@
+include ':android-pdf-viewer'
+include ':scanlibrary'
 include ':app'
 rootProject.name = "DocumentReader"

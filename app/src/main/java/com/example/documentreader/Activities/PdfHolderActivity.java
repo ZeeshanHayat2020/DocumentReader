@@ -24,6 +24,8 @@ import com.example.documentreader.R;
 import java.io.File;
 import java.util.ArrayList;
 
+import static android.os.Environment.getExternalStorageDirectory;
+
 public class PdfHolderActivity extends BaseActivity {
 
     private static final String TAG = "PdfHolderActivity";
@@ -37,8 +39,8 @@ public class PdfHolderActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf_holder);
-//        externalStorageDir=new File(String.valueOf(Environment.getExternalStorageDirectory()));
-        externalStorageDir = new File(Environment.getExternalStorageDirectory().getAbsolutePath());
+     externalStorageDir=new File(String.valueOf(getExternalStorageDirectory()));
+//        externalStorageDir = new File(Environment.getExternalStorageDirectory().getAbsolutePath());
         modelPdfHolderRecyclerList = new ArrayList<>();
         if (!hasPermission()) {
             checkStoragePermission();

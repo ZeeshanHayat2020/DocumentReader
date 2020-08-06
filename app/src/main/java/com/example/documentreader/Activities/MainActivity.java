@@ -14,6 +14,7 @@ import com.example.documentreader.Adapters.AdapterHomeRecycler;
 import com.example.documentreader.Interfaces.OnItemClickListener;
 import com.example.documentreader.Models.ModelHomeRecycler;
 import com.example.documentreader.R;
+import com.scanlibrary.ScanActivity;
 
 import java.util.ArrayList;
 
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         adapterHomeRecycler.setOnItemClickListener(this);
     }
 
+
     @Override
     public void onItemClicked(int position) {
         switch (position){
@@ -67,7 +69,13 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
                 Intent intent= new Intent(this, PdfHolderActivity.class);
                 startActivity(intent);
             }break;
-            case 1:{}break;
+            case 1:{
+               /* Intent intent= new Intent(this, ScanDocumentActivity.class);
+                startActivity(intent);*/
+                 Intent intent= new Intent(this, ScanActivity.class);
+                startActivity(intent);
+
+            }break;
             case 2:{}break;
             case 3:{}break;
         }
